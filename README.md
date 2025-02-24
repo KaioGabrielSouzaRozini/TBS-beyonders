@@ -60,7 +60,8 @@ After cloning the repository, follow these steps to configure Visual Studio.
 <br/>
 ![image](https://github.com/user-attachments/assets/44f7e7e5-e676-4bdb-9d71-86a26f7db9a9)
 <br/>
-
+[
+link to video](https://www.youtube.com/watch?v=QQzAHcojEKg)
 
 
 
