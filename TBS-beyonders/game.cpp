@@ -1,10 +1,9 @@
 #include "Game.h"
 #include "TextureManeger.h"
+#include "GameObject.h"
 #include <iostream>
-#define IMG_GetError 
 
-SDL_Texture* cityText;
-SDL_FRect srcR, destR;
+GameObject* city;
 
 Game::Game() {
 
@@ -39,7 +38,7 @@ void Game::init(const char* title, int x, int y, int width, int height, bool ful
 	else {
 		isRunning = false;
 	}
-	cityText = TextureManeger::LoadTexture("Assets/malchikrpg.png", renderer);
+	city = new GameObject("Assets/PC Computer - Sid Meiers Civilization II - Units.gif", renderer, 0, 0);
 }
 
 void Game::handleEvents() {
@@ -58,18 +57,13 @@ void Game::handleEvents() {
 }
 
 void Game::update() {
-	cnt++;
-	destR.h = 84;
-	destR.w = 64;
-	destR.x++;
-	destR.y++;
-	std::cout << cnt << std::endl;
+	city->Update();
 }
 
 void Game::render() {
 
 	SDL_RenderClear(renderer);
-	SDL_RenderTexture(renderer, cityText, NULL, &destR);
+	city->Render();
 	SDL_RenderPresent(renderer);
 }
 
