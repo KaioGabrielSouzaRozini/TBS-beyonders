@@ -113,7 +113,8 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Dev\SDL3\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL3.lib;SDL3_image.lib
+;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -135,12 +136,15 @@
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TextureManeger.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
+    <ClInclude Include="TextureManeger.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\Users\Kaio Gabriel\Downloads\PC Computer - Sid Meiers Civilization II - City Menu.gif" />
+    <Image Include="..\..\..\Users\Kaio Gabriel\Downloads\malchikrpg.bmp" />
+    <Image Include="..\..\..\Users\Kaio Gabriel\Downloads\malchikrpg.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

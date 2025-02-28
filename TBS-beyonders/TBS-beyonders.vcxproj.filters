@@ -24,14 +24,23 @@
     <ClCompile Include="Game.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
+    <ClCompile Include="TextureManeger.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+    <ClInclude Include="TextureManeger.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\Users\Kaio Gabriel\Downloads\PC Computer - Sid Meiers Civilization II - City Menu.gif">
+    <Image Include="..\..\..\Users\Kaio Gabriel\Downloads\malchikrpg.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\..\..\Users\Kaio Gabriel\Downloads\malchikrpg.bmp">
       <Filter>Assets</Filter>
     </Image>
   </ItemGroup>
