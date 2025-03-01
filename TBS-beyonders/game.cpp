@@ -1,9 +1,14 @@
 #include "Game.h"
 #include "TextureManeger.h"
 #include "GameObject.h"
+#include "Map.h"
 #include <iostream>
 
-GameObject* city;
+GameObject* unit1;
+GameObject* unit2;
+Map* map;
+
+SDL_Renderer* Game::renderer = nullptr;
 
 Game::Game() {
 
@@ -38,7 +43,10 @@ void Game::init(const char* title, int x, int y, int width, int height, bool ful
 	else {
 		isRunning = false;
 	}
-	city = new GameObject("Assets/PC Computer - Sid Meiers Civilization II - Units.gif", renderer, 0, 0);
+	unit1 = new GameObject("Assets/PC Computer - Sid Meiers Civilization II - Units.gif", 0, 0);
+	unit2 = new GameObject("Assets/PC Computer - Sid Meiers Civilization II - Units.gif", 200, 50);
+
+	map = new Map();
 }
 
 void Game::handleEvents() {
@@ -57,13 +65,17 @@ void Game::handleEvents() {
 }
 
 void Game::update() {
-	city->Update();
+	unit1->Update(1, 1);
+	unit2->Update(66, 50);
+
 }
 
 void Game::render() {
 
 	SDL_RenderClear(renderer);
-	city->Render();
+	map->DrawMap();
+	unit1->Render();
+	unit2->Render();
 	SDL_RenderPresent(renderer);
 }
 
