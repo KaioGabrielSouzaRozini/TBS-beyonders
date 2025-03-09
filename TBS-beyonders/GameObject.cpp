@@ -7,15 +7,15 @@ GameObject::GameObject(const char* texturesheet, int x, int y) {
 	ypos = y;
 }
 
-void GameObject::Update(int srcRectX, int srcRectY) {
+void GameObject::Update() {
 
 	xpos++;
 	ypos++;
 
-	srcRect.h = 48;
-	srcRect.w = 64;
-	srcRect.x = srcRectX;
-	srcRect.y = srcRectY;
+	srcRect.h = 32;
+	srcRect.w = 32;
+	srcRect.x = 0;
+	srcRect.y = 0;
 
 	destRect.x = xpos;
 	destRect.y = ypos;

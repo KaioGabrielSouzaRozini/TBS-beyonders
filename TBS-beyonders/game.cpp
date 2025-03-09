@@ -43,8 +43,8 @@ void Game::init(const char* title, int x, int y, int width, int height, bool ful
 	else {
 		isRunning = false;
 	}
-	unit1 = new GameObject("Assets/PC Computer - Sid Meiers Civilization II - Units.gif", 0, 0);
-	unit2 = new GameObject("Assets/PC Computer - Sid Meiers Civilization II - Units.gif", 200, 50);
+	unit1 = new GameObject("Assets/soldier1.png", 0, 0);
+	unit2 = new GameObject("Assets/soldier1.png", 100, 50);
 
 	map = new Map();
 }
@@ -65,8 +65,8 @@ void Game::handleEvents() {
 }
 
 void Game::update() {
-	unit1->Update(1, 1);
-	unit2->Update(66, 50);
+	unit1->Update();
+	unit2->Update();
 
 }
 
